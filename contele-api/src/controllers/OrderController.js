@@ -185,13 +185,33 @@ module.exports = {
   },
 
   async orders(_req, res) {
-    const query = `SELECT * FROM "contele_client" as "cc", 
+    const query = `SELECT "cc"."id" as "Id",
+    "cc"."first_name" as "FirstName",
+    "cc"."last_name" as "LastName",
+    "cc"."email" as "Email", 
+    "cc"."telephone_code" as "TelephoneCode",
+    "cc"."language" as "Language",
+    "cc"."country" as "Country",
+    "csp"."address" as "ShippingAddress",
+    "csp"."city" as "ShippingCity",
+    "csp"."state" as "ShippingState",
+    "csp"."zip_code" as "ShippingZipCode",
+    "csp"."same_bill_address" as "SameBillAddress",
+    "cba"."address" as "BillingAddress",
+    "cba"."city" as "BillingCity",
+    "cba"."state" as "BillingState",
+    "cba"."zip_code" as "BillingZipCode",
+    "cco"."cut_fuel_device" as "CutFuelDevice",
+    "cco"."trackers" as "InstalleTrackersTruckOrMachinery",
+    "cco"."identify_fleet" as "IndentifyFleetDrivers",
+    "cco"."quantity_trackers" as "QuantityTrackers"
+    FROM  "contele_client" as "cc", 
     "contele_client_shipp_address" as "csp", 
     "contele_client_bill_address" as "cba", 
     "contele_client_others" as "cco" 
-    WHERE "cc"."id" = "csp"."id_client"
-    AND "cc"."id" = "cba"."id_client"
-    AND "cc"."id" = "cco"."id_client"`;
+      WHERE "cc"."id" = "csp"."id_client" 
+        AND "cc"."id" = "cba"."id_client"
+          AND "cc"."id" = "cco"."id_client"`;
 
     await db.query(query).then(result => {
       res.json({ Orders: result.rows });
