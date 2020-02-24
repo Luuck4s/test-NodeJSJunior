@@ -24,3 +24,5 @@ contele-web/yarn-error.log*
 # Contele Api
 
 contele-api/node_modules
+
+contele-api/.env
