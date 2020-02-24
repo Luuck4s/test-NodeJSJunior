@@ -1,0 +1,13 @@
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans";
+}
+
+/* Used to demonstrate error in the input */
+input#error,
+input#error:focus {
+  border: 1px solid #ff000055;
+}

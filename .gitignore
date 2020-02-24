@@ -1,0 +1,26 @@
+# Contele Web
+
+contele-web/node_modules
+contele-web/.pnp
+contele-web/.pnp.js
+
+# testing
+contele-web/coverage
+
+# production
+contele-web/build
+
+# misc
+contele-web/.DS_Store
+contele-web/.env.local
+contele-web/.env.development.local
+contele-web/.env.test.local
+contele-web/.env.production.local
+
+contele-web/npm-debug.log*
+contele-web/yarn-debug.log*
+contele-web/yarn-error.log*
+
+# Contele Api
+
+contele-api/node_modules

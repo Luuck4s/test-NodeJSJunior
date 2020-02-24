@@ -1,0 +1,34 @@
+[
+  {
+    "language": "English",
+    "code": "en"
+  },
+  {
+    "language": "French",
+    "code": "fr"
+  },
+  {
+    "language": "Spanish",
+    "code": "es"
+  },
+  {
+    "language": "Arabic",
+    "code": "ar"
+  },
+  {
+    "language": "Mandarin",
+    "code": "cmn"
+  },
+  {
+    "language": "Russian",
+    "code": "ru"
+  },
+  {
+    "language": "Portuguese",
+    "code": "pt"
+  },
+  {
+    "language": "German",
+    "code": "de"
+  }
+]

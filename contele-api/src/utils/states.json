@@ -1,0 +1,22 @@
+[
+  {
+    "id": 1,
+    "name": "Ontário",
+    "idCountry": 1
+  },
+  {
+    "id": 2,
+    "name": "Quebec",
+    "idCountry": 1
+  },
+  {
+    "id": 3,
+    "name": "Distrito Federal",
+    "idCountry": 2
+  },
+  {
+    "id": 4,
+    "name": "São Paulo",
+    "idCountry": 2
+  }
+]

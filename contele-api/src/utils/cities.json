@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "name": "Windsor",
+    "idState": 1
+  },
+  {
+    "id": 2,
+    "name": "Niagara Falls",
+    "idState": 1
+  },
+  {
+    "id": 3,
+    "name": "Toronto",
+    "idState": 1
+  },
+  {
+    "id": 4,
+    "name": "Montreal",
+    "idState": 2
+  },
+  {
+    "id": 5,
+    "name": "Gatineau",
+    "idState": 2
+  },
+  {
+    "id": 6,
+    "name": "Quebec City",
+    "idState": 2
+  },
+  {
+    "id": 7,
+    "name": "Gama",
+    "idState": 3
+  },
+  {
+    "id": 8,
+    "name": "Brasília",
+    "idState": 3
+  },
+  {
+    "id": 9,
+    "name": "Formosa",
+    "idState": 3
+  },
+  {
+    "id": 10,
+    "name": "Santos",
+    "idState": 4
+  },
+  {
+    "id": 11,
+    "name": "Santo André",
+    "idState": 4
+  },
+  {
+    "id": 12,
+    "name": "São Paulo",
+    "idState": 4
+  }
+]
