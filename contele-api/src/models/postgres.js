@@ -1,16 +1,8 @@
-require("dotenv").config();
-const Pool = require("pg").Pool;
+const db = require("../services/postgres");
 
-const db = new Pool({
-  user: process.env.POSTGRES_USER,
-  password: process.env.POSTGRES_PASSWORD,
-  host: "localhost",
-  port: 5432,
-  database: "contele"
-});
-
-createConteleClient();
-
+/**
+ * Creates the customer table
+ */
 async function createConteleClient() {
   db.query(
     `CREATE TABLE IF NOT EXISTS contele_client (
@@ -92,4 +84,4 @@ async function createConteleClientOthers() {
     });
 }
 
-module.exports = db;
+module.exports = createConteleClient;

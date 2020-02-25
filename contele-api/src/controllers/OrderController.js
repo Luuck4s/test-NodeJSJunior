@@ -1,4 +1,4 @@
-const db = require("../models/postgres");
+const db = require("../services/postgres");
 
 const telephoneCoders = require("../utils/telephone_coders.json");
 const languages = require("../utils/languages.json");
@@ -11,7 +11,7 @@ module.exports = {
   /**
    * @URL /
    * @Method GET
-   * @sucess {
+   * @response {
    *  telephoneCoders:Array[object],
    *  languages:Array[object],
    *  states:Array[object],
@@ -184,6 +184,15 @@ module.exports = {
     }
   },
 
+  /**
+   * @URL /orders
+   * @Method GET
+   *
+   * @param {*} res
+   *
+   * @response
+   * {orders: [object{all orders}] }
+   */
   async orders(_req, res) {
     const query = `SELECT "cc"."id" as "Id",
     "cc"."first_name" as "FirstName",
@@ -214,7 +223,7 @@ module.exports = {
           AND "cc"."id" = "cco"."id_client"`;
 
     await db.query(query).then(result => {
-      res.json({ Orders: result.rows });
+      res.json({ orders: result.rows });
     });
   }
 };

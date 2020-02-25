@@ -1,8 +1,13 @@
 const express = require("express");
 const routes = require("./routes");
 const cors = require("cors");
-
+const models = require("./models/postgres");
 const app = express();
+
+/**
+ * Creation of the necessary tables
+ */
+models();
 
 app.use(cors());
 app.use(express.json());
