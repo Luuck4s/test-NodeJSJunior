@@ -27,6 +27,10 @@ export const CustomInput = styled.input.attrs(props => ({
   :disabled {
     background: #00000011;
   }
+
+  @media (max-width: 650px) {
+    width: 95%;
+  }
 `;
 
 export const CustomSelectInput = styled.select.attrs(props => ({
@@ -74,6 +78,10 @@ export const CustomSelectInput = styled.select.attrs(props => ({
 
   :disabled {
     background: #00000011;
+  }
+
+  @media (max-width: 650px) {
+    width: 95%;
   }
 `;
 

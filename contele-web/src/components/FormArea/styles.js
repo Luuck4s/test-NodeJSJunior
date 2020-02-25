@@ -23,12 +23,20 @@ export const Form = styled.form`
   flex: 1;
   flex-direction: row;
   flex-wrap: wrap;
+
+  @media (max-width: 650px) {
+    flex-direction: column;
+  }
 `;
 
 export const TitleSectionForm = styled.h2`
   font-size: 27px;
   color: #161e6b;
   margin: 35px 20px 0px;
+
+  @media (max-width: 350px) {
+    font-size: 22px;
+  }
 `;
 
 export const SectionForm = styled.div`

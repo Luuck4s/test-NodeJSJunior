@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react";
 
+import SubmitButton from "../../components/SubmitButton";
 import Input from "./Input";
 import { Container, TitleSectionForm, SectionForm, Form } from "./styles";
+
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-
-import SubmitButton from "../../components/SubmitButton";
 
 import api from "../../services/api";
 
@@ -44,7 +44,6 @@ export default function FormArea() {
     state: "",
     zipCode: ""
   });
-  const [useSameAddress, setUseSameAddress] = useState(false);
   const [othersOptions, setOthersOptions] = useState({
     cutOffDevice: false,
     trackers: false,
@@ -52,6 +51,7 @@ export default function FormArea() {
     trackersPurchase: ""
   });
   const [emailInvalid, setEmailInvalid] = useState(false);
+  const [useSameAddress, setUseSameAddress] = useState(false);
 
   useEffect(() => {
     async function getData() {
@@ -91,6 +91,10 @@ export default function FormArea() {
     }
   };
 
+  /**
+   * This function filters the states when the country is changed
+   * @param {*} e
+   */
   const handleChangeCountry = e => {
     const valueCountry = e.target.value;
 
@@ -116,8 +120,9 @@ export default function FormArea() {
   };
 
   /**
-   *
+   * This function filters cities when states are changed
    * @param {*} e
+   * @param {*} shippAddress Defines whether to be set in the delivery address or the billing address
    */
   const handleChangeState = (e, shippAddress = true) => {
     const stateValue = e.target.value;
@@ -193,7 +198,7 @@ export default function FormArea() {
   };
 
   /**
-   *
+   * Validate form fields and avoid sending in case of errors
    */
   const handleValidationForm = () => {
     // Validation Contact Information
@@ -336,6 +341,7 @@ export default function FormArea() {
               placeholder="Email Address:"
               value={contactInformation.email}
               type="email"
+              maxLength={100}
               width={42}
               onChange={handleVerificationEmail}
             />
